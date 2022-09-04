@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!the 'document.write()' function should be used for testing purposes only>
+<button type="button" onclick="document.write('Text Deleted')">Try it</button>
+
+</body>
+</html> 
