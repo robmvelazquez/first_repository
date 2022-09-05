@@ -1,0 +1,52 @@
+<! DOCTYPE html ><html lang="en">
+<head>
+<meta charset="UTF-8">
+	<meta name="description" content="JavaScript How To">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="author" content="Robert Velazquez">
+<title>JavaScript To's</title>
+<style>
+</style>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+</head>
+<body>
+<!-- WELCOME to the JavaScript HOW TO file, where I demonstrate thing's I've learned in HTML with JS -->
+
+<h1>Calling a Function</h1>
+
+  <p id="demo">A Paragraph.</p>
+
+  <button type="button" onclick="myFunction()">Try it</button>
+
+<h2>JavaScript can change HTML attribute values.</h2>
+
+  <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+  <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+  <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+  <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+  <p>JavaScript can change the style of an HTML element.</p>
+
+  <button type="button" onclick="document.getElementById('demo').style.fontSize='32px'">Bigger!</button>
+
+  <button type="button" onclick="document.getElementById('demo').style.fontSize='16px'">Smaller!</button>
+
+
+  <p>JavaScript can hide HTML elements.</p>
+
+  <button type="button" onclick="document.getElementById('demo').style.display='none'">Hide!</button>
+
+  <p>JavaScript can show hidden HTML elements.</p>
+
+  <p>Hello JavaScript!</p>
+
+  <button type="button" onclick="document.getElementById('demo').style.display='block'">Show!</button>
+  
+
