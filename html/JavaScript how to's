@@ -79,7 +79,25 @@ function myFunction1() {
   	document.getElementById("Try It?").innerHTML = txt;
 	}
 	</script>
+	
+<h7>JavaScript Prompt</h7>
 
+	<button onclick="myFunction3()">Try it</button>
+
+	<p id="Try It!"></p>
+
+	<script>
+	function myFunction3() {
+	  let text;
+	  let person = prompt("Please enter your name:");
+	  if (person == null || person == "") {
+	    text = "User cancelled the prompt.";
+	  } else {
+	    text = "Hello " + person + "! How are you today?";
+	  }
+	  document.getElementById("Try It!").innerHTML = text;
+	}
+	</script>
 </body>
 </head>
 
