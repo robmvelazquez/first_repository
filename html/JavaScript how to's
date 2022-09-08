@@ -52,3 +52,7 @@ function myFunction() {
 <h3>Delete HTML text</h3>
 	<!the 'document.write()' function should be used for testing purposes only>
 	<button type="button" onclick="document.write('Text Deleted')">Want to delete this text?</button>
+	
+<h4>Mouse-over function</h4>
+	<h1 onmouseover="style.color='grey'" onmouseout="style.color='black'">Mouse over this text</h1>
+
