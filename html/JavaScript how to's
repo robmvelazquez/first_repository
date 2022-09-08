@@ -8,7 +8,7 @@
 <style>
 </style>
 <script>
-function myFunction() {
+function myFunction1() {
   document.getElementById("learning").innerHTML = "Test Paragraph changed.";
 }
 </script>
@@ -20,7 +20,7 @@ function myFunction() {
 
 	<p id="learning">Test Paragraph.</p>
 
-	<button type="button" onclick="myFunction()">Try it</button>
+	<button type="button" onclick="myFunction1()">Try it</button>
 
 <h2>JavaScript can change HTML attribute values.</h2>
 
@@ -55,4 +55,31 @@ function myFunction() {
 	
 <h4>Mouse-over function</h4>
 	<h1 onmouseover="style.color='grey'" onmouseout="style.color='black'">Mouse over this text</h1>
+	
+<h6>Try It Windows Button</h6>
+	<script>
+	window.alert("Please press the 'try it' button");
+	</script>
+
+	<!the alert box can be summoned without the window prefix as shown:
+		alert("Please press the 'try it' button");>
+
+	<button onclick="myFunction2()">Try it</button>
+
+	<p id="Try It?"></p>
+
+	<script>
+	function myFunction2() {
+  	var txt;
+  	if (confirm("Select an option")) {
+   	 txt = "You pressed OK";
+  	} else {
+  	  txt = "You pressed Cancel";
+  	}
+  	document.getElementById("Try It?").innerHTML = txt;
+	}
+	</script>
+
+</body>
+</head>
 
