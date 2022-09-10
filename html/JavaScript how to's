@@ -98,6 +98,14 @@ function myFunction1() {
 	  document.getElementById("Try It!").innerHTML = text;
 	}
 	</script>
+	
+<h8>Display Time</h8>
+
+	<button type="button"
+	onclick="document.getElementById('Time').innerHTML = Date()">
+	Click me to display Date and Time.</button>
+
+	<p id="Time"></p>
 </body>
 </head>
 
