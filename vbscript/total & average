@@ -4,6 +4,7 @@
 'Professor Stewart
 'ENTD261
 'Week 2 Assignment
+'This program calculates the total and average of input variables
 'Enter the following into cmd prompt to run code
 'ENTD261> cscript.exe w2_robert_velazquez.vbs 2 3 5 > results.txt
 '----------------------------------------------'
