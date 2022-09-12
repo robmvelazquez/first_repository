@@ -1,1 +1,0 @@
-WSH.Echo ("Hello class!, this is VBscript using windows host script (WSH)")
