@@ -1,0 +1,7 @@
+'Enter the following into cmd prompt to run code
+'ENTD261> CScript MyVBScript03.vbs 10 12
+
+fnum = cint(Wscript.arguments(0))
+snum = cint(Wscript.arguments(1))
+total = fnum + snum
+WSH.Echo ("The total = " & total) 'concatenation operator
