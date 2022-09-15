@@ -1,3 +1,5 @@
+/* Program must be run utilizing the command prompt with the 'node' command*/
+
 var http = require('http');
 
 http.createServer(function (req, res) {
