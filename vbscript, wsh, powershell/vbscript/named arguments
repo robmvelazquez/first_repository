@@ -1,6 +1,9 @@
-'
+'Named Arguments in VBScript
+'To run code, execute the following in the command prompt
+'ENTD261> CScript.exe namedArgs.vbs Classes Courses
+'These lines of code will count the two strings and the outcome will be 
 
 set colArgs = WScript.Arguments.Named
-strUniv = colArgs.Item("Univ")
-strClass = colArgs.Item("Class")
-wscript.echo strUniv & " and " & strClass &"  count=  " & WScript.Arguments.Count
+strClasses = colArgs.Item("Classes")
+strCourses = colArgs.Item("Courses")
+wscript.echo strCourses & " and " & strClasses &"  count=  " & WScript.Arguments.Count
