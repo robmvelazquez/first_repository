@@ -1,0 +1,8 @@
+'Calling a script with unnamed arguments is a simple method of passing values into a VBScript
+'Those values can then be parsed up within the script by reading the properties
+'To run the code, execute the following in the command prompt:
+'C:\ENTD261>cscript.exe args.vbs Classes
+
+strUniv = WScript.Arguments.Item(0)
+strClass = WScript.Arguments.Item(1)
+wscript.echo strUniv & " and " & strClass &"  count=  " & WScript.Arguments.Count
