@@ -1,0 +1,6 @@
+'
+
+set colArgs = WScript.Arguments.Named
+strUniv = colArgs.Item("Univ")
+strClass = colArgs.Item("Class")
+wscript.echo strUniv & " and " & strClass &"  count=  " & WScript.Arguments.Count
