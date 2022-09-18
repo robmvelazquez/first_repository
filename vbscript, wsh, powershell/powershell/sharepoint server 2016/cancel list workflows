@@ -1,0 +1,15 @@
+Add-PSSnapin "Microsoft.SharePoint.PowerShell" -ErrorAction SilentlyContinue
+$web = Get-SPWeb "https://web.ddg60.navy.mil:8081"
+ 
+#List Name
+$list = $web.Lists["CS/CC Muster Report"]
+ 
+# Iterate through all Items and all Workflows on Items
+foreach ($item in $list.Items) 
+ {
+   foreach ($wf in $item.Workflows) 
+     {
+        #Cancel Workflows        
+        [Microsoft.SharePoint.Workflow.SPWorkflowManager]::CancelWorkflow($wf)      
+     }
+  }
