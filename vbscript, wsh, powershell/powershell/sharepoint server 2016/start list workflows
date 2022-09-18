@@ -1,0 +1,33 @@
+Add-PSSnapin "Microsoft.SharePoint.PowerShell" -ErrorAction SilentlyContinue
+$web = Get-SPWeb -Identity "https://web.ddg60.navy.mil:8081"
+$wfMgr = $web.Site.WorkFlowManager
+$list = $web.Lists["CS/CC Muster Report"]
+
+$wfAssociations =
+$list.WorkflowAssociations.GetAssociationByName("Muster Reports","en-US")
+
+$aData = $wfAssociations.AssociationData
+$items = $list.Items
+
+$items | ForEach-Object {
+    $wfMgr.StartWorkFlow($_,$wfAssociations,$aData,$true)
+}
+
+$wfMgr.Dispose()
+$web.Dispose()
+
+$wfMgr = $web.Site.WorkFlowManager
+$list = $web.Lists["CS/CA Muster Report"]
+
+$wfAssociations =
+$list.WorkflowAssociations.GetAssociationByName("Muster Reports","en-US")
+
+$aData = $wfAssociations.AssociationData
+$items = $list.Items
+
+$items | ForEach-Object {
+    $wfMgr.StartWorkFlow($_,$wfAssociations,$aData,$true)
+}
+
+$wfMgr.Dispose()
+$web.Dispose()
