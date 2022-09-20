@@ -1,3 +1,5 @@
+'To run, open in the command line interface
+
 var http = require('http');
 var dt = require('./myfirstmodule');
 
