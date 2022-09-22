@@ -1,0 +1,4 @@
+'displays string in WSH
+'double click in file explorer to display line in WSH using Jscript
+
+WSH.Echo("Hell class!, this is Jscript using windows host script (WSH)");
