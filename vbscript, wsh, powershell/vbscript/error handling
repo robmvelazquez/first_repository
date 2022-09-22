@@ -1,0 +1,24 @@
+'Error Handling/Trapping
+'The purpose of this program is to demontrate the use of the global Err object in VBScript
+
+On Error Resume Next
+
+'Error #1
+x = 5/0
+
+If Err.Number <> 0 Then
+  WScript.Echo "Error in Step 1: " & Err.Description
+  Err.Clear
+End If
+
+'Error #2
+
+y = 10/0
+If Err.Number <> 0 Then
+  WScript.Echo "Error in Step 2:  " & Err.Description
+  Err.Clear
+
+End If
+'If you no longer want to continue following an error after that block's completed,
+'call this.
+On Error Goto 0 
