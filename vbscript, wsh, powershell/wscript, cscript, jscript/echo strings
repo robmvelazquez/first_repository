@@ -1,0 +1,16 @@
+'Execute this program in the command prompt to display strings using WScript
+
+'Defines the string that will be echoed
+recordStr = "Robert        Velazquez      San Diego       California" 
+
+'Defines variables
+fName   = Trim(Left(recordStr, 6))              ' Trim white space from Left string
+lName   = Trim(Mid(recordStr, 14, 10))           ' Mid() using start index and length
+city = Trim(Mid(recordStr, 29, 10))        ' length argument as an expression
+state    = Trim(Mid(recordStr, 46))
+
+'Returns echoes for the string
+Wscript.Echo "First Name     : ", fName
+Wscript.Echo "Last Name      : ", lName
+Wscript.Echo "City        : ", city
+Wscript.Echo "State : ", state & " "
