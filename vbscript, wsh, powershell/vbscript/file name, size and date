@@ -1,28 +1,49 @@
-'------------------------------------------------------------------------------------------------------------------------'
+'-----------------------------------------------------------------------------------------------------------------------'
 'Use this program to read file name, file size and date file was created by double-clicking on this file in file explorer
 'If you would like to change the file or directory, change the fn="" below
+'The program will write a results.txt file output to the folder path listed in the 'fn' variable
 '------------------------------------------------------------------------------------------------------------------------'
 
-'fn is variable to hold folder name, change xyz to a folder/directory name you have on your system
+'fn is the variable that contains the path to the folder
 fn="\\HomeServer1\HomeShare\robert.velazquez\My Documents\Programming\Courses\ENTD261"
+
+'Declares the variable ResultsFile which will be used to create a results.txt file
+Dim ResultsFile
+
 
 'Set fs, fs is an object name (you can name it anything) for the file system
 Set fs = CreateObject("Scripting.FileSystemObject")
 
+
 'fs.FolderExist(fn),  is how to check the if a folder is existing  
 'FolderExist is a function in the library “Scripting.FileSystemObject” that takes the folder name (fn) as parameter.
-'This if/then/else statement will verify if the files exist. A prompt will appear informing the file is good or bad.
+'This if/then/else statement will verify if the files exist. A prompt will appear with either 'Folder Check Successful or Folder Check Error'
 If fs.FolderExists(fn) then
-   msgbox "good folder"
+   msgbox "Folder Check Successful"
 else
-   msgbox "bad file"
+   msgbox "Folder Check Error: Check Files"
 end if
+
 
 'Set folder = is another variable to hold folder information
 'fs.GetFolder(fn), GetFolder is a function to get the folder content 
 Set folder = fs.GetFolder(fn)
 
+
+'Creates an object for ResultsFile
+Set ResultsFile = CreateObject("Scripting.FileSystemObject")
+
+
+'Places the 'results.txt' file in the folder path directory below
+Set OutPutFile = ResultsFile.OpenTextFile("\\HomeServer1\HomeShare\robert.velazquez\My Documents\Programming\Courses\ENTD261\results.txt" ,8 , True)
+
+'Writes the below string of text into the results.txt file
+OutPutFile.WriteLine("Writing results to a text file has been successful")
+
+
+'Windows popup window will inform the user the file has been created
 wscript.echo "Folder Results File Created"
+
 
 'Set files = is a variable to hold file information from the folder object called folder.Files
 Set files = folder.Files
@@ -31,3 +52,5 @@ For Each file in files
     wscript.echo "Size: " & (file.size)
     wscript.echo "Date: " & (file.datecreated)
 Next
+
+
