@@ -1,0 +1,79 @@
+// declaring variables
+ 
+ var firstName
+ var lastName
+ firstName="Robert"
+ lastName="Velazquez"
+ 
+ var fullName=lastName+", "+firstName
+ alert("My Name is "+ fullName)
+
+ // if-then statement
+ var number="1"
+ if(number=="1")
+ {
+  alert("Number is 1")
+ }
+ else
+ {
+  alert("Number is not one")
+ }
+
+ // loop 10 times
+ for(i=0;i<10;i++)
+ {
+   document.write("Hello "+i +"\n")     //use "\n" for new line
+ }
+ 
+ //function is a group of code with a name, function return a value
+ function addTwoNum(num1, num2)
+ {
+    return num1+num2
+ } 
+ 
+  //test
+ var result=addTwoNum(10, 20)
+ alert(result)
+   
+ </script>
+ 
+ <script>
+ // this is a function in class style
+function person(first, last, age, eye)
+{
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.name=name;
+}
+ 
+function name()   // this is a function of the class
+{
+    return this.firstName + " " + this.lastName
+};
+ 
+// adding a new function to the existing class, so name2 is part of the person class(function)
+person.prototype.name2 = function()
+{
+    return this.lastName + ", " +this.firstName  ;
+};
+ 
+ 
+// testing
+var my = new person("Robert", "Velazquez", 50, "blue");
+document.getElementById("demo").innerHTML = "My name is " + my.name();
+document.getElementById("demo").innerHTML += " <br/> My name is " + my.name2();
+ 
+ 
+/******************************************************
+ Practice,
+ 1) Add more functions to the above class
+ 2) Create your own class
+ 3) Create functions with parameters
+
+ 4) Practice logical operator &&, ||, and ! (and, or, and not)
+******************************************************/
+< /script>
+
+ 
