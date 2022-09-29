@@ -1,1 +1,2 @@
+\* Open in the command prompt, "Hello World" will appear in the CLI*\
 console.log("Hello World!")
