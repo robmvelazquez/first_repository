@@ -1,0 +1,47 @@
+"""
+Robert Velazquez
+
+08 OCT 2022
+
+ENTD261
+
+Professor Stewart
+
+Week 5 Python Assignment
+
+Run this program with a Python compiler.
+"""
+
+import os.path, sys, time
+
+# Specifies the location of our folder
+folder = "F:\ENTD261"
+path = os.listdir(folder)
+
+# Creates a function that displays the file size, modified and created date & time
+def fileFunction():
+   for files in path:
+
+# Filters files by size between the ranges of 500 - 1000
+      if(os.stat(files).st_size > 500 and os.stat(files).st_size < 1000):
+        print(files, "\n", "Size: %s" % os.stat(files).st_size) 
+        print("Last Modified: %s" % time.ctime(os.path.getmtime(files)))
+        print("Created: %s\n" % time.ctime(os.path.getctime(files)))
+
+# Calls the function
+fileFunction()
+
+#Exception statement with output to file
+try:
+   f = open("test.txt", "a")
+
+except IOError:
+   print("Error: can't find file or read data")
+   
+else:
+   for files in path:
+      f.writelines(files)
+      f.writelines("\n")
+   print("Output content to test.txt file")
+   f.close()
+   
