@@ -1,16 +1,4 @@
-"""
-Robert Velazquez
-
-08 OCT 2022
-
-ENTD261
-
-Professor Stewart
-
-Week 5 Python Assignment
-
-Run this program with a Python compiler.
-"""
+#Run this program with a Python compiler to display creation, modification, and size of files within a folder.
 
 import os.path, sys, time
 
